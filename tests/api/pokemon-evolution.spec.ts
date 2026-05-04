@@ -7,7 +7,7 @@ import { PokemonSorter } from '../../utils/PokemonSorter';
 import { GetPokemonEvolutionTask } from '../../tasks/GetPokemonEvolutionTask';
 
 test.describe('Pokémon evolutions', () => {
-  test('Show Squirtle evolutions with weight in alphabetical order', async ({ request }: { request: APIRequestContext }, testInfo: TestInfo) => {
+  test('@smoke @api Show Squirtle evolutions with weight in alphabetical order', async ({ request }: { request: APIRequestContext }, testInfo: TestInfo) => {
     const pokeApiClient: PokeApiClient = new PokeApiClient(request);
     const pokemonSorter: PokemonSorter = new AlphabeticalPokemonSorter();
     const getPokemonEvolution: GetPokemonEvolutionTask = new GetPokemonEvolutionTask(pokeApiClient, pokemonSorter);

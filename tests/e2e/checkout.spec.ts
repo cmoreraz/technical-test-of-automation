@@ -11,7 +11,7 @@ import { LoginTask } from '../../tasks/LoginTask';
 import { FakerTestDataFactory } from '../../utils/helpers/TestDataFactory';
 
 test.describe('E2E checkout flow', () => {
-	test('purchase Sauce Labs Fleece Jacket from login to confirmation', async ({ page }, testInfo) => {
+	test('@e2e @critical @smoke purchase Sauce Labs Fleece Jacket from login to confirmation', async ({ page }, testInfo) => {
 		const loginPage = new LoginPage(page);
 		const productsPage = new ProductsPage(page);
 		const cartPage = new CartPage(page);
