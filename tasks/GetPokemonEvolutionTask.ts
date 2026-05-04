@@ -1,6 +1,6 @@
 import { PokemonApiGateway } from '../api/PokemonApiGateway';
 import { EvolutionChain, EvolutionChainLink, Pokemon, PokemonSpecies, PokemonWithWeight } from '../models/Pokemon';
-import { PokemonSorter } from '../sorting/PokemonSorter';
+import { PokemonSorter } from '../utils/PokemonSorter';
 
 export class GetPokemonEvolutionTask {
   constructor(

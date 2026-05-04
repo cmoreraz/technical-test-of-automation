@@ -23,7 +23,7 @@ technical-test-of-automation/
 │   └── PokemonAssertions.ts
 ├── models/
 │   └── Pokemon.ts
-├── sorting/
+├── utils/
 │   ├── AlphabeticalPokemonSorter.ts
 │   └── PokemonSorter.ts
 ├── tasks/

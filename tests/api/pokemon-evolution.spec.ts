@@ -2,8 +2,8 @@ import { APIRequestContext, TestInfo, test } from '@playwright/test';
 import { PokeApiClient } from '../../api/PokeApiClient';
 import { PokemonAssertions } from '../../assertions/PokemonAssertions';
 import { PokemonWithWeight } from '../../models/Pokemon';
-import { AlphabeticalPokemonSorter } from '../../sorting/AlphabeticalPokemonSorter';
-import { PokemonSorter } from '../../sorting/PokemonSorter';
+import { AlphabeticalPokemonSorter } from '../../utils/AlphabeticalPokemonSorter';
+import { PokemonSorter } from '../../utils/PokemonSorter';
 import { GetPokemonEvolutionTask } from '../../tasks/GetPokemonEvolutionTask';
 
 test.describe('Pokémon evolutions', () => {
