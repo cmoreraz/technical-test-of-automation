@@ -70,3 +70,16 @@ npx playwright install
 ```bash
 npx playwright test
 ```
+
+## Credenciales de prueba
+
+Las credenciales usadas en el flujo E2E ya no están quemadas en los tests: se centralizaron en `config/credentials.ts`.
+
+Por defecto los valores son `standard_user` / `secret_sauce`, pero se pueden sobrescribir con variables de entorno:
+
+```bash
+export E2E_USERNAME=my_user
+export E2E_PASSWORD=my_pass
+npx playwright test tests/e2e/checkout.spec.ts --project=e2e-chromium
+```
+
