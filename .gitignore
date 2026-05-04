@@ -41,6 +41,10 @@ build/Release
 node_modules/
 jspm_packages/
 
+# OS files
+.DS_Store
+Thumbs.db
+
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
@@ -58,6 +62,12 @@ web_modules/
 
 # Optional REPL history
 .node_repl_history
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
 
 # Output of 'npm pack'
 *.tgz
@@ -141,3 +151,16 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Agent Teams Lite local registry
+.atl/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Technical test source documents
+*.pdf
