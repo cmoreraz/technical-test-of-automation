@@ -5,7 +5,13 @@ on:
     types: [published]
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   publish-report:
@@ -31,15 +37,20 @@ jobs:
         continue-on-error: true
         run: npx playwright test
 
-      - name: Publish Playwright HTML report
+      - name: Setup GitHub Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v4
+        uses: actions/configure-pages@v5
+
+      - name: Upload Playwright HTML report
+        if: always()
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: playwright-report
-          destination_dir: releases/${{ github.event.release.tag_name }}
-          keep_files: true
+          path: playwright-report
+
+      - name: Deploy Playwright HTML report
+        if: always()
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Fail workflow if tests failed
         if: steps.tests.outcome == 'failure'
