@@ -19,20 +19,41 @@ technical-test-of-automation/
 │   ├── HttpStatusValidator.ts
 │   ├── PokeApiClient.ts
 │   └── PokemonApiGateway.ts
+├── pages/
+│   ├── LoginPage.ts
+│   ├── ProductsPage.ts
+│   ├── CartPage.ts
+│   ├── CheckoutPage.ts
+│   └── OrderConfirmationPage.ts
+├── tasks/
+│   ├── GetPokemonEvolutionTask.ts
+│   ├── LoginTask.ts
+│   ├── AddProductToCartTask.ts
+│   └── CompleteCheckoutTask.ts
 ├── assertions/
-│   └── PokemonAssertions.ts
+│   ├── PokemonAssertions.ts
+│   ├── CartAssertions.ts
+│   └── CheckoutAssertions.ts
 ├── models/
-│   └── Pokemon.ts
+│   ├── Pokemon.ts
+│   ├── Product.ts
+│   └── CheckoutCustomer.ts
+├── config/
+│   ├── credentials.ts
+│   ├── url.ts
+│   └── routes.ts
 ├── utils/
 │   ├── AlphabeticalPokemonSorter.ts
-│   └── PokemonSorter.ts
-├── tasks/
-│   └── GetPokemonEvolutionTask.ts
+│   ├── PokemonSorter.ts
+│   ├── ScreenshotReporter.ts
+│   └── helpers/
+│       ├── TestDataFactoryInterface.ts
+│       └── TestDataFactory.ts
 ├── tests/
 │   ├── api/
 │   │   └── pokemon-evolution.spec.ts
 │   └── e2e/
-├── pages/
+│       └── checkout.spec.ts
 └── playwright.config.ts
 ```
 
