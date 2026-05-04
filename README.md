@@ -13,7 +13,7 @@ La arquitectura usa una aproximación **Screenplay-lite**: el test no concentra 
 
 También se aplican principios **SOLID** mediante interfaces como `PokemonApiGateway` y `PokemonSorter`. Gracias a eso, el flujo que obtiene la evolución de Squirtle no queda amarrado a una implementación específica de API ni a una única forma de ordenar. Si mañana cambia la fuente de datos o la estrategia de ordenamiento, se puede reemplazar esa pieza sin reescribir el escenario completo.
 
-### Generación de datos con Faker
+#### Generación de datos con Faker
 
 Se utiliza **@faker-js/faker** para generar datos dinámicos en el flujo E2E. Los datos de checkout (firstName, lastName, postalCode) se crean automáticamente en cada ejecución a través de `FakerTestDataFactory`, implementación de la interfaz `TestDataFactoryInterface`. Esto evita valores quemados y asegura que cada test tenga datos frescos y variados.
 
