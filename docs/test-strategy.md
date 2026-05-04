@@ -106,7 +106,6 @@ Antes de mergear un cambio, tienen que pasar estos checks:
 Después de cada ejecución, genera automáticamente:
 
 - **HTML de Playwright:** El reporte que cualquiera puede abrir en el navegador. Muestra quiénes pasaron, quiénes fallaron, paso a paso.
-- **JUnit XML:** Para que CI/CD lo integre con otras herramientas (Jenkins, GitHub Actions, etc).
 - **Screenshots:** Si algo falla, captura la pantalla.
 - **Videos:** Graba la ejecución si hay fallo (retener video on-failure, borrar si todo OK).
 - **Traces:** La "caja negra" de Playwright: qué clickeamos, qué requests se hicieron, todo.
