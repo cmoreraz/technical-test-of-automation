@@ -108,3 +108,7 @@ export E2E_PASSWORD=my_pass
 npx playwright test tests/e2e/checkout.spec.ts --project=e2e-chromium
 ```
 
+## Reporte público
+
+- [Reporte público de Playwright](https://cmoreraz.github.io/technical-test-of-automation/)
+
