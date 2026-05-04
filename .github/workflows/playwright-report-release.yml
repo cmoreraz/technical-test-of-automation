@@ -1,8 +1,9 @@
 name: Publish Playwright Report
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -19,7 +20,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -38,17 +40,14 @@ jobs:
         run: npx playwright test
 
       - name: Setup GitHub Pages
-        if: always()
         uses: actions/configure-pages@v5
 
       - name: Upload Playwright HTML report
-        if: always()
         uses: actions/upload-pages-artifact@v3
         with:
           path: playwright-report
 
       - name: Deploy Playwright HTML report
-        if: always()
         id: deployment
         uses: actions/deploy-pages@v4
 
