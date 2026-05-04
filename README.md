@@ -59,6 +59,10 @@ technical-test-of-automation/
 
 ## Configuración
 
+### Documentación
+
+- [Pipeline CI/CD, Quality Gates y Reportes](./docs/CI_CD.md)
+
 ### Clonar el repositorio
 
 ```bash
